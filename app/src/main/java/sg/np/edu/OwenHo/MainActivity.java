@@ -25,11 +25,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        UserDBHandler dbHandler = new UserDBHandler(this);
+
         Intent i = getIntent();
         String uName = i.getStringExtra("name");
         String uDesc = i.getStringExtra("description");
         Integer pos = i.getIntExtra("position",0);
-        User user1 = new User("Owen","FI Student",1,false);
 
         TextView nameTV = findViewById(R.id.textView);
         TextView descTV = findViewById(R.id.textView2);
@@ -47,15 +49,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (data.get(pos).followed){
                     data.get(pos).followed = false;
+                    dbHandler.updateUser(data.get(pos));
                     followButton.setText("Follow");
                     Toast.makeText(MainActivity.this,"Unfollowed",Toast.LENGTH_SHORT).show();
                 }
                 else{
                     data.get(pos).followed = true;
+                    dbHandler.updateUser(data.get(pos));
                     followButton.setText("Unfollow");
                     Toast.makeText(MainActivity.this,"Followed",Toast.LENGTH_SHORT).show();
                 }
-                //Log.d(TAG, "ABCDE "+user1.followed);
             }
         });
 
