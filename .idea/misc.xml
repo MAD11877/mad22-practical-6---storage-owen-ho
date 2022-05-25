@@ -3,11 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/user/StudioProjects/mad22-practical-6---storage-owen-ho/app/src/main/res/layout/activity_list.xml" value="0.5" />
-        <entry key="..\:/Users/user/StudioProjects/mad22-practical-6---storage-owen-ho/app/src/main/res/layout/activity_message_group.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/user/StudioProjects/mad22-practical-6---storage-owen-ho/app/src/main/res/layout/fragment_group1.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/user/StudioProjects/mad22-practical-6---storage-owen-ho/app/src/main/res/layout/user_list.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/user/StudioProjects/mad22-practical-6---storage-owen-ho/app/src/main/res/layout/user_list_alternative.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/hosha/StudioProjects/mad22-practical-6---storage-owen-ho/app/src/main/res/layout/activity_log_in.xml" value="0.5" />
       </map>
     </option>
   </component>

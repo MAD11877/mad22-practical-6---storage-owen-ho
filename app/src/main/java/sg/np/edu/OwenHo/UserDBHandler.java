@@ -89,25 +89,22 @@ public class UserDBHandler extends SQLiteOpenHelper {
 
     public void updateUser(User u){
         /*
-         * SELECT * FROM USER WHERE id = (id)
-         *
-         * INSERT INTO USER VALUES(name, description, id, followed)
+         * UPDATE user SET followed = 0/1 WHERE name = name
          */
-        String query = "SELECT * FROM "+TABLE_USERS+" WHERE "+COLUMN_ID+" = "+u.id;
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(query, null);
-        while (cursor.moveToNext()){
-            db.delete(TABLE_USERS, COLUMN_ID + " = ?",
-                    new String[] { String.valueOf(u.id) });
-            cursor.close();
-        }
-        if(u.followed){
-            db.execSQL("INSERT INTO "+TABLE_USERS+" VALUES(\""+u.name+"\",\""+u.description+"\",\""+u.id+"\",\""+1+"\")");
+        Integer followedBool;
+        if (u.followed) {
+            followedBool = 1;
         }
         else{
-            db.execSQL("INSERT INTO "+TABLE_USERS+" VALUES(\""+u.name+"\",\""+u.description+"\",\""+u.id+"\",\""+0+"\")");
+            followedBool = 0;
         }
-
+        String query = "UPDATE "+TABLE_USERS+" SET "
+                + COLUMN_FOLLOWED + " = "
+                + followedBool + " WHERE "
+                + COLUMN_NAME + " = \""
+                + u.name + "\"";
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL(query);
         db.close();
     }
 

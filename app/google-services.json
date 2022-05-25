@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "436108035477",
+    "project_id": "mad-week-6-practical-challenge",
+    "storage_bucket": "mad-week-6-practical-challenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436108035477:android:c4d79f460080223911a29c",
+        "android_client_info": {
+          "package_name": "sg.np.edu.OwenHo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436108035477-oqinpduikvs8hbid4ghbeamf9m52c4c9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBs2lUH7aFwAGPWrxxVBa3RaGIDg5_FdrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436108035477-oqinpduikvs8hbid4ghbeamf9m52c4c9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
